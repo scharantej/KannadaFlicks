@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ movie.title }}</title>
+</head>
+<body>
+<h1>{{ movie.title }}</h1>
+<p>Release Date: {{ movie.release_date }}</p>
+<p>Cast: {{ movie.cast }}</p>
+<p>Plot: {{ movie.plot }}</p>
+<p>Rating: {{ movie.rating }}</p>
+<a href="/favorites">Add to Favorites</a>
+<form action="/rate_movie/{{ movie.id }}" method="post">
+<label for="rating">Rate this movie:</label>
+<input type="number" name="rating" id="rating" min="1" max="5">
+<input type="submit" value="Rate">
+</form>
+</body>
+</html>
+
+
